@@ -1,0 +1,23 @@
+<!-- ================= STICKY PUSH BANNER ================= -->
+<div id="push-banner" class="push-banner">
+  <span>🔔 Get latest news alerts!</span>
+  <button id="push-enable-btn" class="btn orange">Enable</button>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <p>© <span id="year"></span> NcertCollege. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Auto update year
+  document.getElementById("year").innerText = new Date().getFullYear();
+
+  // Show push banner only if not already enabled
+  document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("push-banner");
+    if (banner && localStorage.getItem("push-enabled") !== "true") {
+      banner.style.display = "block";
+    }
+  });
+</script>

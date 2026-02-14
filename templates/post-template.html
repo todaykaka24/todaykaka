@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{title}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{title}}">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<div id="header">
+  <!-- Include partials/header.html here -->
+</div>
+
+<div class="container">
+
+  <h1 class="post-title">{{title}}</h1>
+
+  <img src="{{thumbnail}}" alt="{{thumbAlt}}" title="{{thumbAlt}}" class="post-image">
+
+  <div class="post-content">
+    {{content}}
+  </div>
+
+  <!-- Author & Date -->
+  <div class="author-box">
+    <img src="/assets/images/news/author.png" alt="{{author}}">
+    <div>
+      <strong>{{author}}</strong> • <time datetime="{{date}}">{{date}}</time>
+    </div>
+  </div>
+
+  <!-- Tags -->
+  <div class="post-tags">
+    {{tags}}
+  </div>
+
+  <!-- Share -->
+  <div class="share-box">
+    <a href="#">WhatsApp</a>
+    <a href="#">Telegram</a>
+    <a href="#">Twitter</a>
+  </div>
+
+  <!-- Comment section -->
+  <div id="comments"></div>
+
+</div>
+
+<!-- Common Section -->
+<div id="common-section">
+  <!-- Include partials/common-section.html here -->
+</div>
+
+<!-- Footer -->
+<div id="footer">
+  <!-- Include partials/footer.html here -->
+</div>
+
+<script src="/push.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
