@@ -1,7 +1,7 @@
 // ===============================
 // PWA + Firebase Service Worker (Fixed)
 // ===============================
-const CACHE_NAME = "ncertcollege-pwa-v1";
+const CACHE_NAME = "Todaykaka-pwa-v1";
 
 // -------------------------------
 // Install
@@ -42,10 +42,10 @@ self.addEventListener("push", (event) => {
   try {
     data = event.data.json();
   } catch (err) {
-    data = { title: "NcertCollege Update", body: event.data.text(), url: "/" };
+    data = { title: "Todaykaka2 Update", body: event.data.text(), url: "/" };
   }
 
-  const title = data.title || "NcertCollege Update";
+  const title = data.title || "Todaykaka Update";
   const options = {
     body: data.body || "Latest news available",
     icon: "/assets/images/icon-192.png",
