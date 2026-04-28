@@ -1,7 +1,0 @@
-# robots.txt - DEVELOPMENT MODE
-# Block entire site from indexing
-
-User-agent: *
-Disallow: /
-
-# Sitemap disabled during development
