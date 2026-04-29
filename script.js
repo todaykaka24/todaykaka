@@ -37,7 +37,6 @@ function startTimer() {
 
   if (!timer) return;
 
-  // ⏳ starting text
   if (text) {
     text.innerText = "लिंक तैयार हो रहा है...";
   }
@@ -51,20 +50,14 @@ function startTimer() {
     if (time <= 0) {
       clearInterval(interval);
 
-      // ✅ change text
       if (text) {
         text.innerText = "👇 नीचे स्क्रोल करें और बटन दबाएं";
       }
 
-      // ✅ show button
       const btn = document.getElementById("nextBtn");
       if (btn) {
         btn.style.display = "block";
-
-        // 🔥 scroll to button
         btn.scrollIntoView({ behavior: "smooth" });
-
-        // 🔥 start button timer
         startButtonTimer();
       }
     }
@@ -92,7 +85,6 @@ function startButtonTimer() {
       btn.disabled = false;
       btn.innerText = "निःशुल्क वीडियो कॉल";
 
-      // ✅ enable click
       btn.onclick = function () {
         goToSite3();
       };
@@ -101,9 +93,10 @@ function startButtonTimer() {
 }
 
 
-// 🔗 SMART REDIRECT (2-LAYER SYSTEM)
+// 🔗 🔥 3-LAYER SMART REDIRECT
 function goToSite3() {
 
+  // ✅ Layer 2 (internal pages)
   const layer2Pages = [
     "best-credit-card-for-beginners-india.html",
     "best-loan-apps-india-instant-cash.html",
@@ -117,27 +110,44 @@ function goToSite3() {
     "student-loan-without-guarantor-india.html"
   ];
 
-  // 🔥 correct current page detect
-  let currentPage = window.location.pathname;
+  // ✅ Layer 3 (FINAL OUTER LINKS)
+  const layer3Pages = [
+    "https://wpsite.dirtypush.com/",
+    "https://wpsite.dirtypush.com/",
+    "https://wpsite.dirtypush.com/",
+    "https://wpsite.dirtypush.com/",
+    "https://wpsite.dirtypush.com/",
+    "https://wpsite.dirtypush.com/",
+    "https://wpsite.dirtypush.com/",
+    "https://wpsite.dirtypush.com/",
+    "https://wpsite.dirtypush.com/",
+    "https://wpsite.dirtypush.com/"
+  ];
 
-  // remove folder path
-  currentPage = currentPage.substring(currentPage.lastIndexOf("/") + 1);
-
-  // remove query params
-  currentPage = currentPage.split("?")[0];
+  // 🔍 current page detect
+  let currentPage = window.location.pathname
+    .split("/")
+    .pop()
+    .split("?")[0]
+    .toLowerCase();
 
   console.log("Current Page:", currentPage);
 
-  // ✅ Layer 2 → FINAL
-  if (layer2Pages.includes(currentPage)) {
+  const normalizedLayer2 = layer2Pages.map(p => p.toLowerCase());
 
-    window.location.href = "https://wpsite.dirtypush.com/";
+  // ✅ Layer 2 → Layer 3
+  if (normalizedLayer2.includes(currentPage)) {
+    console.log("✅ Layer 2 → Layer 3");
 
-  } else {
+    const finalURL = layer3Pages[Math.floor(Math.random() * layer3Pages.length)];
+    window.location.href = finalURL;
+  } 
+  
+  // ✅ Layer 1 → Layer 2
+  else {
+    console.log("➡️ Layer 1 → Layer 2");
 
-    // 🔥 Layer 1 → random Layer 2
-    const randomPage = layer2Pages[Math.floor(Math.random() * layer2Pages.length)];
-
-    window.location.href = "/" + randomPage; // ✅ ROOT FIX
+    const nextPage = layer2Pages[Math.floor(Math.random() * layer2Pages.length)];
+    window.location.href = "/" + nextPage;
   }
 }
