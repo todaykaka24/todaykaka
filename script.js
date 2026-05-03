@@ -99,7 +99,7 @@ function goToSite3() {
   // ✅ Layer 2 (internal pages)
   const layer2Pages = [
     "instant-approval-credit-cards-india.html",
-    "instant-loan-online-approval-in-minutes.html",
+    "get-a-loan-without-cibil-score.html",
     "latest-home-loan-interest-rates-india-2026.html",
     "loan-against-salary-instant-approval.html",
     "low-interest-personal-loan-online-india.html",
