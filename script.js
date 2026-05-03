@@ -98,16 +98,16 @@ function goToSite3() {
 
   // ✅ Layer 2 (internal pages)
   const layer2Pages = [
-    "best-credit-card-for-beginners-india.html",
-    "best-loan-apps-india-instant-cash.html",
-    "business-loan-without-collateral-india.html",
-    "emergency-loan-online-instant-approval.html",
-    "get-personal-loan-without-credit-check.html",
-    "get-a-loan-without-cibil-score.html",
+    "instant-approval-credit-cards-india.html",
     "instant-loan-online-approval-in-minutes.html",
+    "latest-home-loan-interest-rates-india-2026.html",
+    "loan-against-salary-instant-approval.html",
     "low-interest-personal-loan-online-india.html",
+    "online-loan-for-unemployed-india.html",
+    "personal-loan-emi-calculator-guide.html",
     "same-day-payday-loan-online.html",
-    "student-loan-without-guarantor-india.html"
+    "student-loan-without-guarantor-india.html",
+    "trusted-loan-apps-india-instant-approval.html"
   ];
 
   // ✅ Layer 3 (FINAL OUTER LINKS)
