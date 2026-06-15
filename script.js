@@ -31,7 +31,7 @@ function scrollToTimer() {
 }
 
 function startTimer() {
-  let time = 20;
+  let time = 10;
   let timer = document.querySelector(".timer");
 
   if (!timer) return;
@@ -56,9 +56,9 @@ function startTimer() {
 }
 
 
-// 🔽 BUTTON TIMER (10 sec)
+// 🔽 BUTTON TIMER (5 sec)
 function startButtonTimer() {
-  let time = 10;
+  let time = 5;
   const btn = document.getElementById("nextBtn");
 
   if (!btn) return;
